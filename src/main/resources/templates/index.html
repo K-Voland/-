@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>Магазин</title>
+        <link href="css/stile.css" rel=stylesheet>
+    </head>
+
+    <body>
+        <div id="blok-body">
+
+            <header insert="blok/blok-header :: header"></header>
+
+            <div id="blok-content">
+                <H1>тут вывеска товаров</H1>
+            </div>
+            <div id="blok-right">
+                <h1>тут тип менюшки</h1>
+            </div>
+
+            <footer th:insert="blok/blok-footer :: footer" ></footer>
+
+        </div>
+    </body>
+</html>
