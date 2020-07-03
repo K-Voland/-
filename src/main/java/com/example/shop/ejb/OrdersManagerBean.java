@@ -10,6 +10,6 @@ import javax.ejb.Stateless;
 @LocalBean
 public class OrdersManagerBean {
     //public Order createOrder() {
-//
+    //
     //}
 }

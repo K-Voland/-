@@ -1,4 +1,9 @@
 
+navbar-collapse {
+	justify-content: space-between;
+	background-color: #333333;
+}
+
 /*кнопки и их вариации*/
 a:link {
 	color: #D72020;
@@ -15,7 +20,7 @@ a:visited {
 
 /*красим фон*/
 body {
-	background: yellow url(images/back_all.jpg) repeat-x;
+	/*background: yellow url(images/back_all.jpg) repeat-x;*/
 	font: 13px Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	color: #333333;
 }
@@ -82,7 +87,7 @@ body {
     float: left;
     border-radius: 5px;
     padding: 10px;
-    text-decoration: color=white;
+    text-decoration-color: white;
 }
 #left
 {
@@ -101,7 +106,7 @@ padding-left: 15px;
 padding-top: 15px;
 text-transform: uppercase;
 color: #ffffff;
-background: url(images/title.gif) no-repeat
+/*background: url(images/title.gif) no-repeat*/
 }
 
 #left ul {

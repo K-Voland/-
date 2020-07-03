@@ -4,32 +4,32 @@
         <meta charset="utf-8">
         <title>Магазин</title>
         <link href="../css/stile.css" rel=stylesheet>
-        <link href="blok/blok-footer.html" rel=stylesheet>
-        <link href="blok/blok-header.html" rel=stylesheet>
+        <link href="blocks/footer.ftlh" rel=stylesheet>
+        <link href="blocks/blok-header.html" rel=stylesheet>
     </head>
 
     <body>
         <div id="blok-body">
 
             <!--шапка сайта--> 
-            <iframe src="blok/blok-header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+            <iframe src="blocks/blok-header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
            <!-- <iframe src="blok/blok-header.html"></iframe>--> 
             <!--шапка сайта--> 
 
             <div class="clear"></div> <!--что бы не наплывало--> 
 
             <!--Основной контент сайта--> 
-            <iframe src="blok/blok-content.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+            <iframe src="blocks/blok-content.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 
             <!--левая меню сайта--> 
-            <iframe src="blok/blok-right.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+            <iframe src="blocks/blok-right.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
 
 
             <div class="clear"></div> <!--что бы не наплывало--> 
 
             <!--низ сайта--> 
             <footer>
-                <iframe src="blok/blok-footer.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+                <iframe src="blocks/footer.ftlh" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
             </footer>
             <!--низ сайта-->
 

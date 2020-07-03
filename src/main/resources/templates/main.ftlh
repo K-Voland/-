@@ -1,5 +1,10 @@
-<html>
-<body>
+<!--
+@Author: Vasiliy Vakhonin
+@Date: 02.07.2020
+-->
+<#import "blocks/default.ftlh" as base>
+
+<@base.page currentPage="main">
     <div>
         <form method="post">
             <input type="text" name="name" placeholder="Введите товар" />
@@ -20,5 +25,4 @@
             <i>{{price}}</i>
         </div>
     {{/messages}}
-</body>
-</html>
+</@base.page>
