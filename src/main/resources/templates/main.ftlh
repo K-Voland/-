@@ -18,11 +18,11 @@
         <input type="text" name="filter" />
         <button type="submit">Найти</button>
     </form>
-    {{#messages}}
-        <div>
-            <b>{{id}}</b>
-            <span>{{name}}</span>
-            <i>{{price}}</i>
-        </div>
-    {{/messages}}
+<#--    {{#messages}}-->
+<#--        <div>-->
+<#--            <b>{{id}}</b>-->
+<#--            <span>{{name}}</span>-->
+<#--            <i>{{price}}</i>-->
+<#--        </div>-->
+<#--    {{/messages}}-->
 </@base.page>

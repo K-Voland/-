@@ -4,7 +4,8 @@
 -->
 
 <#macro navbar>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3" xmlns="http://www.w3.org/1999/html">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top mb-3" xmlns="http://www.w3.org/1999/html">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">SomeName</a>
         </div>
@@ -12,7 +13,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse navbar-fixed-top" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Худи и свитшоты</a>
@@ -47,10 +48,13 @@
                         <a class="dropdown-item" href="#">Головные уборы</a>
                     </div>
                 </li>
+                <li class="nav-item dropdown">
+                    <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                </li>
             </ul>
-            <button>
-                <span class="glyphicon glyphicon-search"></span>
-            </button>
+
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

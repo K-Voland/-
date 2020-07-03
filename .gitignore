@@ -12,6 +12,7 @@ vcs.xml
 *.class
 *.jar
 target
+.vscode
 .idea
 .idea/workspace.xml
 **/.idea/workspace.xml
