@@ -7,6 +7,7 @@
 
 <#import "../blocks/navbar.ftlh" as navbar>
 <#import "../blocks/footer.ftlh" as footer>
+<#import "../blocks/carousel.ftlh" as carousel>
 
 <#macro page currentPage>
     <!DOCTYPE html>
@@ -25,13 +26,37 @@
             <!-- Material Design Bootstrap -->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
             <!-- Additional CSS -->
-            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="/static/css/style.css">
+            <style>
+                html,
+                body,
+                header
+                .carousel {
+                    height: 60vh;
+                }
+                @media (max-width: 740px) {
+                    html,
+                    body,
+                    .carousel {
+                        height: 100vh;
+                    }
+                }
+                @media (min-width: 800px) and (max-width: 850px) {
+                    html,
+                    body,
+                    .carousel {
+                        height: 100vh;
+                    }
+                }
+            </style>
+
         </head>
 
         <body class="d-flex flex-column h-100">
 
             <header>
                 <@navbar.navbar/> <!-- Панель навигации -->
+                <@carousel.carousel/> <#-- Слайдер-->
             </header>
 
             <main role="main" class="container flex-shrink-0">
