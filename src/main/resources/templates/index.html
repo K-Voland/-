@@ -1,38 +1,322 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Магазин</title>
-        <link href="/static/css/style.css" rel=stylesheet>
-        <link href="blocks/footer.ftlh" rel=stylesheet>
-        <link href="blocks/blok-header.html" rel=stylesheet>
-    </head>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
 
-    <body>
-        <div id="blok-body">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.5.0/css/bootstrap.min.css}"/>
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Additional CSS -->
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
 
-            <!--шапка сайта--> 
-            <iframe src="blocks/blok-header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
-           <!-- <iframe src="blok/blok-header.html"></iframe>--> 
-            <!--шапка сайта--> 
+    <style>
+        html,
+        body,
+        header,
+        .carousel {
+            height: 60vh;
+        }
+        @media (max-width: 740px) {
+            html,
+            body,
+            header,
+            .carousel {
+                height: 100vh;
+            }
+        }
+        @media(min-width: 800px) and (max-width: 850px) {
+            html,
+            body,
+            header,
+            .carousel {
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
 
-            <div class="clear"></div> <!--что бы не наплывало--> 
+<body style="background-color: #222222">
 
-            <!--Основной контент сайта--> 
-            <iframe src="blocks/blok-content.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+<!--Navbar-->
+<div th:replace="~{blocks/navbar :: navbar}"></div>
+<!--End Navbar-->
 
-            <!--левая меню сайта--> 
-            <iframe src="blocks/blok-right.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+<!--Carousel-->
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade pt-4" data-ride="carousel" >
 
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" class="active"  data-slide-to="0"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
 
-            <div class="clear"></div> <!--что бы не наплывало--> 
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <div class="view">
+                <img class="d-block w-100" src="https://sun9-76.userapi.com/c854428/v854428320/199a26/29yEhkdLi6w.jpg"
+                     alt="First slide">
 
-            <!--низ сайта--> 
-            <footer>
-                <iframe src="blocks/footer.ftlh" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
-            </footer>
-            <!--низ сайта-->
+                <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
 
-        </div>
-    </body>
+                    <div class="text-center white-text mx-5 wow fadeIn">
+
+                        <h1 class="mb-4">
+                            <strong>Some's shop project</strong>
+                        </h1>
+
+                        <p>
+                            <strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Ducimus, unde?
+                            </strong>
+                        </p>
+
+                        <p class="mb-4 d-none d-md-block">
+                            <strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Ad qui nihil dolorem laboriosam? Enim?
+                            </strong>
+                        </p>
+                        <a href="#" class="btn btn-outline-white btn-lg">
+                            Lorem, ipsum dolor. <i class="fa fa-graduation-cap ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> <!--End view -->
+        </div> <!--End carousel-item 1-->
+
+        <div class="carousel-item">
+            <div class="view">
+                <img class="d-block w-100" src="https://sun9-5.userapi.com/c850524/v850524874/1ee052/jnQ-gaOpmA8.jpg"
+                     alt="Second slide">
+
+                <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+                    <div class="text-center white-text mx-5 wow fadeIn">
+
+                        <h1 class="mb-4">
+                            <strong>Some's shop project</strong>
+                        </h1>
+
+                        <p>
+                            <strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Ducimus, unde?
+                            </strong>
+                        </p>
+
+                        <p class="mb-4 d-none d-md-block">
+                            <strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Ad qui nihil dolorem laboriosam? Enim?
+                            </strong>
+                        </p>
+                        <a href="#" class="btn btn-outline-white btn-lg">
+                            Lorem, ipsum dolor. <i class="fa fa-graduation-cap ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> <!--End view -->
+        </div> <!--End carousel-item 2-->
+
+        <div class="carousel-item">
+            <div class="view">
+                <img class="d-block w-100" src="https://sun9-5.userapi.com/c857216/v857216984/15313/fDbr-1rAFuI.jpg"
+                     alt="Third slide">
+
+                <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+                    <div class="text-center white-text mx-5 wow fadeIn">
+
+                        <h1 class="mb-4">
+                            <strong>Some's shop project</strong>
+                        </h1>
+
+                        <p>
+                            <strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Ducimus, unde?
+                            </strong>
+                        </p>
+
+                        <p class="mb-4 d-none d-md-block">
+                            <strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Ad qui nihil dolorem laboriosam? Enim?
+                            </strong>
+                        </p>
+                        <a href="#" class="btn btn-outline-white btn-lg">
+                            Lorem, ipsum dolor. <i class="fa fa-graduation-cap ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> <!--End view -->
+        </div> <!--End carousel-item 3-->
+    </div> <!--End carousel-inner -->
+
+    <a href="#carouselExampleIndicators" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Prev</span>
+    </a>
+
+    <a href="#carouselExampleIndicators" class="carousel-control-next" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div> <!--End carousel -->
+
+<!--Main container-->
+<div class="container-fluid">
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-dark black lighten-3 mt-3 mb-5">
+            <span class="navbar-brand">Бренды:</span>
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#nextNav"
+                    aria-controls="nextNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nextNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">All</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Hyper-PC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">MSI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Asus</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <div class="md-form my-0">
+                        <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>
+            </div> <!--End navbar-collapse -->
+        </nav> <!--End Main navbar-->
+        <section class="text-center mb-4">
+            <div class="row wow fadeIn">
+                <div class="col mb-4">
+                    <div class="card indexCard">
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img.mvideo.ru/Pdb/30045690b.jpg" alt="img">
+                            <a href="">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+    <!--                              <a href="" class="grey-text">-->
+    <!--                                  <h5>T-shirt</h5>-->
+    <!--                              </a>-->
+                            <h5>
+                                <strong>
+                                    <a href="#" class="dark-grey-text">HyperPC M3 <span class="badge badge-pill danger-color">NEW</span></a>
+                                </strong>
+                            </h5>
+                            <h4 class="font-weight-bold blue-text">
+                                <strong>199$</strong>
+                            </h4>
+                        </div> <!--End card-body-->
+                    </div>
+                </div> <!--End card 1-->
+                <div class="col mb-4">
+                    <div class="card indexCard">
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img-atgplt.mvideo.ru/Pdb/30039703b.jpg">
+                            <a href="">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+    <!--                              <a href="" class="grey-text">-->
+    <!--                                  <h5>T-shirt</h5>-->
+    <!--                              </a>-->
+                            <h5>
+                                <strong>
+                                    <a href="#" class="dark-grey-text">HyperPC M9 <span class="badge badge-pill danger-color">NEW</span></a>
+                                </strong>
+                            </h5>
+                            <h4 class="font-weight-bold blue-text">
+                                <strong>199$</strong>
+                            </h4>
+                        </div> <!--End card-body-->
+                    </div>
+                </div> <!--End card 2-->
+            </div> <!-- End row 1-->
+            <div class="row wow fadeIn">
+                <div class="col mb-4">
+                    <div class="card indexCard">
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img-atgplt.mvideo.ru/Pdb/30039702b.jpg" alt="img">
+                            <a href="">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+    <!--                              <a href="" class="grey-text">-->
+    <!--                                  <h5>T-shirt</h5>-->
+    <!--                              </a>-->
+                            <h5>
+                                <strong>
+                                    <a href="#" class="dark-grey-text">HyperPC M8 <span class="badge badge-pill danger-color">NEW</span></a>
+                                </strong>
+                            </h5>
+                            <h4 class="font-weight-bold blue-text">
+                                <strong>199$</strong>
+                            </h4>
+                        </div> <!--End card-body-->
+                    </div>
+                </div> <!--End card 3-->
+                <div class="col mb-4">
+                    <div class="card indexCard">
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://img-atgplt.mvideo.ru/Pdb/30041638b.jpg" alt="img">
+                            <a href="">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+    <!--                              <a href="" class="grey-text">-->
+    <!--                                  <h5>T-shirt</h5>-->
+    <!--                              </a>-->
+                            <h5>
+                                <strong>
+                                    <a href="#" class="dark-grey-text">MSI Infinite 7RA-465 <span class="badge badge-pill danger-color">NEW</span></a>
+                                </strong>
+                            </h5>
+                            <h4 class="font-weight-bold blue-text">
+                                <strong>199$</strong>
+                            </h4>
+                        </div> <!--End card-body-->
+                    </div>
+                </div> <!--End card 4-->
+            </div> <!-- End row 2-->
+        </section>
+    </main><!--End Main-->
+</div>
+<!-- End Main container   -->
+
+<!--INPUT FOOTER-->
+<div th:replace="~{blocks/footer :: copy}"></div>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" th:src="@{webjars/bootstrap/4.5.0/js/bootstrap.min.js}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            new WOW().init();
+        });
+    </script>
+</body>
 </html>

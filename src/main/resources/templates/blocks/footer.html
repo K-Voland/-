@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+    <footer th:fragment="copy" class="page-footer text-center font-small mt-1 wow fadeIn footer-dark black pt-4">
+
+
+        <hr class="my-4" style="background-color: dimgrey">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+            <div class="pt-4 mb-4">
+                <a href="#" role="button" class="btn btn-outline-white">DATMOL <i class="fa fa-graduation-cap ml-2"></i></a>
+                <a href="#" role="button" class="btn btn-outline-white">Online Shop <i class="fa fa-graduation-cap ml-2"></i></a>
+                <a href="#" role="button" class="btn btn-outline-white" data-toggle="modal" data-target="#exampleModal">Как работает магазин</a>
+            </div>
+
+            <!-- Social buttons -->
+            <div class="text-center">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        </div>
+        <!-- Copyright -->
+
+        <!--   Modal window     -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Hello world!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--   Modal window close   -->
+
+    </footer> <!--End Footer and icons-->
+</body>
+</html>
